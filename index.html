@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cliente</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      min-height: 100vh;
+      font-family: Inter, Arial;
+      display: grid;
+      place-content: center;
+    }
+    button{
+      cursor: pointer;
+      width: 300px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.05rem;
+      height: 300px;
+      border-radius: 100%;
+      border: none;
+      outline: none;
+      box-shadow: inset 0px 0px 30px rgba(0, 0, 0, .8), 2px 5px 12px rgba(0, 0, 0, .5);
+      transition: .25s ease scale;
+    }
+    button:hover{
+      scale: 1.02;
+    }
+    button:active{
+      scale: .95;
+    }
+    button.a{
+      background: orangered;
+    }
+    button.b{
+      background: royalblue;
+    }
+  </style>
+</head>
+<body>
+  <button id="button">Presiona el botón</button>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./client.js"></script>
+</body>
+</html>
+

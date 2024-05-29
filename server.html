@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servidor</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            min-height: 100vh;
+            font-family: Inter, Arial;
+            display: grid;
+            place-content: center;
+        }
+        button{
+            cursor: pointer;
+            font-size: 2rem;
+            color: darkslategray;
+            background: transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid darkslategray;
+        }
+        div{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            padding: 10px 0;
+        }
+        div::before{
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 0;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+        div.active::before{
+            animation: start 1s linear forwards;
+        }
+        div.a::before{
+            background: orangered;
+        }
+        div.b::before{
+            background: royalblue;
+        }
+        h2{
+            font-size: 2.2rem;
+            color: #fff;
+            padding: 20px 0;
+        }
+        @keyframes start {
+            0%{
+                width: 0;
+            }
+            100%{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+    </div>
+    <!-- <button>Resetear</button> -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./server.js"></script>
+</body>
+</html>
